@@ -41,11 +41,11 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start": "npm install && npm run prod",
+    "start": "npm run prod",
     "build": "npm run clean && npm run transpile",
     "server": "node ./dist-server/bin/www",
-    "dev": "NODE_ENV=development npm run build && npm run server",
-    "prod": "NODE_ENV=production npm run build && npm run server",
+    "dev": "NODE_ENV=development npm run server",
+    "prod": "NODE_ENV=production npm run server",
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rm -rf dist-server",
     "watch:dev": "nodemon",
