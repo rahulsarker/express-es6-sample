@@ -43,7 +43,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start": "npm run prod",
+    "start": "npm install --save && npm run prod",
     "build": "npm-run-all clean transpile",
     "server": "node ./dist-server/bin/www",
     "dev": "NODE_ENV=development npm-run-all build server",
