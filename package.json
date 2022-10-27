@@ -13,7 +13,6 @@
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.2",
-    "rimraf": "^3.0.1",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4"
@@ -42,13 +41,13 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start": "npm install --save && npm run prod",
+    "start": "npm install && npm run prod",
     "build": "npm run clean && npm run transpile",
     "server": "node ./dist-server/bin/www",
     "dev": "NODE_ENV=development npm run build && npm run server",
     "prod": "NODE_ENV=production npm run build && npm run server",
     "transpile": "babel ./server --out-dir dist-server",
-    "clean": "rimraf dist-server",
+    "clean": "rm -rf dist-server",
     "watch:dev": "nodemon",
     "test": "jest"
   }
